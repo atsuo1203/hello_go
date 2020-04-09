@@ -38,14 +38,14 @@ import (
 )
 
 func main() { // mainファイルが実行される。mainは一個だけ。
-    sub.Print()
+    sub.ClassPrint()
 }
 
 
 ```
 
-```sub1.go
-// sub1.go
+```sub2.go
+// sub2.go
 // ファイル名はおそらく何でもいい。
 
 // ここもフォルダ名を指定する。
@@ -60,7 +60,7 @@ type mydata struct {
 }
 
 // 大文字じゃ無いとダメ！！！
-func Print() {
+func ClassPrint() {
 	var x mydata
 	x.num = 10
 	x.str = "something"
@@ -78,6 +78,12 @@ $ go build main.go
 $ ./main
 ```
 
-http://localhost:9090/
+http://localhost:9090/?url_long=111&url_long=222
 
 ↑ これでサーバに接続
+
+# 詳しく知りたいなら！
+
+- [Go 言語の初心者が見ると幸せになれる場所](https://qiita.com/tenntenn/items/0e33a4959250d1a55045)
+- [Go で簡単な Web サーバを立てる](https://astaxie.gitbooks.io/build-web-application-with-golang/content/ja/03.2.html)
+- [Go の構造体を package に外出ししてハマッたこと](https://qiita.com/zurazurataicho/items/4a95e0daf0d960cfc2f7)
