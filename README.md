@@ -67,3 +67,17 @@ func Print() {
 	fmt.Printf("x.num=%d, x.str=%s\n", x.num, x.str)
 }
 ```
+
+# 簡単なサーバ
+
+今回のプロジェクトでは、簡単なサーバが実装してある。
+下記のコマンドで実行できる。
+
+```sh
+$ go build main.go
+$ ./main
+```
+
+http://localhost:9090/
+
+↑ これでサーバに接続
