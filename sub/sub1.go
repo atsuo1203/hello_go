@@ -2,6 +2,7 @@ package sub
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 )
@@ -18,4 +19,13 @@ func SayhelloName(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("val:", strings.Join(v, ""))
 	}
 	fmt.Fprintf(w, "Hello astaxie!") //ここでwに入るものがクライアントに出力されます。
+}
+
+// サーバを起動
+func Server() {
+	http.HandleFunc("/", SayhelloName)       //アクセスのルーティングを設定します。
+	err := http.ListenAndServe(":9090", nil) //監視するポートを設定します。
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
