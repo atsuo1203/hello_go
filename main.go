@@ -5,8 +5,12 @@ import (
 )
 
 func main() {
-	// struct の 実行結果
-	sub.ClassPrint()
-	// サーバ実行
-	sub.Server()
+	// // struct の 実行結果
+	// sub.ClassPrint()
+
+	// getの動作
+	// sub.GetServer()
+
+	// postの動作
+	sub.PostServer()
 }
